@@ -1,0 +1,13 @@
+version: "3.2"
+services:
+  postgres:
+    container_name: postgres-starter
+    image: postgres:latest
+    ports:
+    - "5432:5432"
+    volumes:
+    - pg:/data/asset
+    env_file:
+    - .env
+volumes:
+  pg:
